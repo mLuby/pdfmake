@@ -1,9 +1,12 @@
+// Roboto font is included as Base64 Strings. See github wiki to use custom fonts.
+const RobotoBase64 = require('../build/vfs_fonts.js').pdfMake.vfs;
+
 var fonts = {
 	Roboto: {
-		normal: 'fonts/Roboto-Regular.ttf',
-		bold: 'fonts/Roboto-Medium.ttf',
-		italics: 'fonts/Roboto-Italic.ttf',
-		bolditalics: 'fonts/Roboto-MediumItalic.ttf'
+		normal: new Buffer(RobotoBase64['Roboto-Regular.ttf'], 'base64'),
+		bold: new Buffer(RobotoBase64['Roboto-Medium.ttf'], 'base64'),
+		italics: new Buffer(RobotoBase64['Roboto-Italic.ttf'], 'base64'),
+		bolditalics: new Buffer(RobotoBase64['Roboto-MediumItalic.ttf'], 'base64')
 	}
 };
 
